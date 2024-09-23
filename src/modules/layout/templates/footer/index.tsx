@@ -1,6 +1,10 @@
-import { Popover, Transition } from "@headlessui/react";
-import { Fragment } from "react";
+"use client"
+
+import { Popover, Transition } from "@headlessui/react"
 import { ArrowRightMini, XMark } from "@medusajs/icons"
+import { Region } from "@medusajs/medusa"
+import { Text, clx, useToggleState } from "@medusajs/ui"
+import { Fragment } from "react"
 
 import { Text, clx } from "@medusajs/ui"
 
