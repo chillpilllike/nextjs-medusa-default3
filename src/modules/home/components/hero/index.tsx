@@ -16,7 +16,7 @@ const Hero = () => {
             level="h2"
             className="text-3xl leading-10 text-ui-fg-subtle font-normal"
           >
-            Payments Powered by Stripe.com
+            Free Shipping on orders over $50 | Hassle-Free Returns
           </Heading>
         </span>
         <a
