@@ -18,8 +18,11 @@ export default async function Footer() {
               href="/"
               className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
             >
-              Medusa Store
+              About Our Store
             </LocalizedClientLink>
+            We are committed to delivering a curated selection of high-quality products designed to meet your needs. Our focus is on providing a seamless,
+            secure, and efficient online shopping experience, backed by exceptional customer support. We continuously strive to exceed expectations and build
+            lasting relationships with our valued customers.
           </div>
           <div className="text-small-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">
             {product_categories && product_categories?.length > 0 && (
