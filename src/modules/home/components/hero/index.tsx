@@ -10,13 +10,13 @@ const Hero = () => {
             level="h1"
             className="text-3xl leading-10 text-ui-fg-base font-normal"
           >
-            Ecommerce Starter Template
+            Discover Unique Products, Exceptional Quality & Timely Delivery
           </Heading>
           <Heading
             level="h2"
             className="text-3xl leading-10 text-ui-fg-subtle font-normal"
           >
-            Free Shipping on orders over $50 | Hassle-Free Returns
+            Free Shipping | 30 Days Return | Secure payments using Stripe.com
           </Heading>
         </span>
         <a
@@ -24,7 +24,7 @@ const Hero = () => {
           target="_blank"
         >
           <Button variant="secondary">
-            View on GitHub
+            Shop the Latest Trends!
             <Github />
           </Button>
         </a>
