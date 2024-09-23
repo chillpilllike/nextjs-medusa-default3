@@ -1,7 +1,6 @@
-import { Popover, Transition } from "@headlessui/react"
-import { ArrowRightMini, XMark } from "@medusajs/icons"
-import { Region } from "@medusajs/medusa"
-import { Fragment } from "react"
+import { Popover, Transition } from "@headlessui/react";
+import { Fragment } from "react";
+import { XMark } from "@heroicons/react/solid";
 
 import { Text, clx } from "@medusajs/ui"
 
