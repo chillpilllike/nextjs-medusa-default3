@@ -10,13 +10,13 @@ const Hero = () => {
             level="h1"
             className="text-3xl leading-10 text-ui-fg-base font-normal"
           >
-            Discover Unique Products, Exceptional Quality & Timely Delivery
+            Unique Products, Exceptional Quality & Timely Delivery
           </Heading>
           <Heading
             level="h2"
             className="text-3xl leading-10 text-ui-fg-subtle font-normal"
           >
-            Free Shipping | 30 Days Return | Secure payments using Stripe.com
+            Free Shipping | 30 Days Return | Secure payments
           </Heading>
         </span>
         <a
