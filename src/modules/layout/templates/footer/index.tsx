@@ -1,3 +1,7 @@
+import { Popover, Transition } from "@headlessui/react";
+import { Fragment } from "react";
+import { XMark } from "@heroicons/react/solid";
+
 import { Text, clx } from "@medusajs/ui"
 
 import { getCategoriesList, getCollectionsList } from "@lib/data"
@@ -110,14 +114,48 @@ export default async function Footer() {
               <span className="txt-small-plus txt-ui-fg-base">Medusa</span>
               <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
                 <li>
-                  <a
-                    href="https://github.com/medusajs"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-ui-fg-base"
-                  >
-                    GitHub
-                  </a>
+                  {/* Popover for GitHub Link */}
+                  <Popover className="relative">
+                    {({ open, close }) => (
+                      <>
+                        <Popover.Button
+                          className="text-ui-fg-subtle hover:text-ui-fg-base"
+                          data-testid="github-popup-link"
+                        >
+                          GitHub
+                        </Popover.Button>
+
+                        <Transition
+                          show={open}
+                          as={Fragment}
+                          enter="transition ease-out duration-150"
+                          enterFrom="opacity-0"
+                          enterTo="opacity-100 backdrop-blur-2xl"
+                          leave="transition ease-in duration-150"
+                          leaveFrom="opacity-100 backdrop-blur-2xl"
+                          leaveTo="opacity-0"
+                        >
+                          <Popover.Panel className="absolute z-10 w-72 p-4 bg-white rounded-md shadow-lg">
+                            <div className="flex justify-between items-center mb-4">
+                              <h2 className="text-lg font-semibold">Important Information</h2>
+                              <button
+                                data-testid="close-github-popup"
+                                onClick={close}
+                                className="hover:text-red-500"
+                              >
+                                <XMark className="w-5 h-5" />
+                              </button>
+                            </div>
+                            <p className="text-sm text-gray-700">
+                              Severe BPH can sometimes lead to complications such as urinary tract infections,
+                              bladder stones, or kidney damage. If you’re experiencing any of these symptoms, it’s
+                              important to consult a healthcare provider for evaluation and management.
+                            </p>
+                          </Popover.Panel>
+                        </Transition>
+                      </>
+                    )}
+                  </Popover>
                 </li>
                 <li>
                   <a
