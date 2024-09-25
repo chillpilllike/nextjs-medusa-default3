@@ -118,34 +118,31 @@ export default async function Footer() {
                     GitHub
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="https://docs.medusajs.com"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-ui-fg-base"
-                  <Popover className="h-full flex">
-                    {({ open, close }) => (
-                      <>
-                        <div className="relative flex h-full">
-                          <Popover.Button className="relative h-full flex items-center transition-all ease-out duration-200 focus:outline-none hover:text-ui-fg-base">
-                            Documentation
-                          </Popover.Button>
-                        </div>
+         <li>
+  <Popover className="h-full flex">
+    {({ open, close }) => (
+      <>
+        <div className="relative flex h-full">
+          <Popover.Button className="relative h-full flex items-center transition-all ease-out duration-200 focus:outline-none hover:text-ui-fg-base">
+            Documentation
+          </Popover.Button>
+        </div>
 
-                        <Transition>
-                          <Popover.Panel className="absolute z-10 w-screen max-w-sm p-4 bg-white shadow-lg">
-                            <p>
-                              We are committed to delivering a curated selection of high-quality products designed 
-                              to meet your needs. Our focus is on providing a seamless, secure, and efficient online 
-                              shopping experience, backed by exceptional customer support. We continuously strive 
-                              to exceed expectations and build lasting relationships with our valued customers.
-                            </p>
-                          </Popover.Panel>
-                        </Transition>
-                      </>
-                    )}
-                  </Popover>
+        <Transition>
+          <Popover.Panel className="absolute z-10 w-screen max-w-sm p-4 bg-white shadow-lg">
+            <p>
+              We are committed to delivering a curated selection of high-quality products designed 
+              to meet your needs. Our focus is on providing a seamless, secure, and efficient online 
+              shopping experience, backed by exceptional customer support. We continuously strive 
+              to exceed expectations and build lasting relationships with our valued customers.
+            </p>
+          </Popover.Panel>
+        </Transition>
+      </>
+    )}
+  </Popover>
+</li>
+                <li>
                   <a
                     href="https://github.com/medusajs/nextjs-starter-medusa"
                     target="_blank"
