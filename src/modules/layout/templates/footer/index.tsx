@@ -1,79 +1,150 @@
-import { Text, clx } from "@medusajs/ui";
+import { Text, clx } from "@medusajs/ui"
 
-import { getCategoriesList, getCollectionsList } from "@lib/data";
+import { getCategoriesList, getCollectionsList } from "@lib/data"
 
-import LocalizedClientLink from "@modules/common/components/localized-client-link";
-import MedusaCTA from "@modules/layout/components/medusa-cta";
-
-import { useState } from 'react'; // Import useState hook for popup state
-
-// Mark the component as a Client Component (on a separate line)
-use client;
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import MedusaCTA from "@modules/layout/components/medusa-cta"
 
 export default async function Footer() {
-  const { collections } = await getCollectionsList(0, 6);
-  const { product_categories } = await getCategoriesList(0, 6);
-
-  const [isPopupOpen, setIsPopupOpen] = useState(false); // State for popup
-
-  const handleOpenPopup = () => setIsPopupOpen(true);
-  const handleClosePopup = () => setIsPopupOpen(false);
+  const { collections } = await getCollectionsList(0, 6)
+  const { product_categories } = await getCategoriesList(0, 6)
 
   return (
     <footer className="border-t border-ui-border-base w-full">
       <div className="content-container flex flex-col w-full">
         <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-40">
-          {/* Rest of the code remains the same... */}
+          <div>
+            <LocalizedClientLink
+              href="/"
+              className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
+            >
+              Medusa Store
+            </LocalizedClientLink>
+          </div>
+          <div className="text-small-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">
+            {product_categories && product_categories?.length > 0 && (
+              <div className="flex flex-col gap-y-2">
+                <span className="txt-small-plus txt-ui-fg-base">
+                  Categories
+                </span>
+                <ul className="grid grid-cols-1 gap-2" data-testid="footer-categories">
+                  {product_categories?.slice(0, 6).map((c) => {
+                    if (c.parent_category) {
+                      return
+                    }
 
-          <div className="flex flex-col gap-y-2">
-            <span className="txt-small-plus txt-ui-fg-base">Medusa</span>
-            <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
-              <li>
-                <a
-                  href="https://github.com/medusajs"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-ui-fg-base"
+                    const children =
+                      c.category_children?.map((child) => ({
+                        name: child.name,
+                        handle: child.handle,
+                        id: child.id,
+                      })) || null
+
+                    return (
+                      <li
+                        className="flex flex-col gap-2 text-ui-fg-subtle txt-small"
+                        key={c.id}
+                      >
+                        <LocalizedClientLink
+                          className={clx(
+                            "hover:text-ui-fg-base",
+                            children && "txt-small-plus"
+                          )}
+                          href={`/categories/${c.handle}`}
+                          data-testid="category-link"
+                        >
+                          {c.name}
+                        </LocalizedClientLink>
+                        {children && (
+                          <ul className="grid grid-cols-1 ml-3 gap-2">
+                            {children &&
+                              children.map((child) => (
+                                <li key={child.id}>
+                                  <LocalizedClientLink
+                                    className="hover:text-ui-fg-base"
+                                    href={`/categories/${child.handle}`}
+                                    data-testid="category-link"
+                                  >
+                                    {child.name}
+                                  </LocalizedClientLink>
+                                </li>
+                              ))}
+                          </ul>
+                        )}
+                      </li>
+                    )
+                  })}
+                </ul>
+              </div>
+            )}
+            {collections && collections.length > 0 && (
+              <div className="flex flex-col gap-y-2">
+                <span className="txt-small-plus txt-ui-fg-base">
+                  Collections
+                </span>
+                <ul
+                  className={clx(
+                    "grid grid-cols-1 gap-2 text-ui-fg-subtle txt-small",
+                    {
+                      "grid-cols-2": (collections?.length || 0) > 3,
+                    }
+                  )}
                 >
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://docs.medusajs.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-ui-fg-base"
-                >
-                  Documentation
-                </a>
-              </li>
-              <li>
-                <button onClick={handleOpenPopup} className="hover:text-ui-fg-base">
-                  Source code
-                </button>
-              </li>
-            </ul>
+                  {collections?.slice(0, 6).map((c) => (
+                    <li key={c.id}>
+                      <LocalizedClientLink
+                        className="hover:text-ui-fg-base"
+                        href={`/collections/${c.handle}`}
+                      >
+                        {c.title}
+                      </LocalizedClientLink>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            <div className="flex flex-col gap-y-2">
+              <span className="txt-small-plus txt-ui-fg-base">Medusa</span>
+              <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
+                <li>
+                  <a
+                    href="https://github.com/medusajs"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-ui-fg-base"
+                  >
+                    GitHub
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://docs.medusajs.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-ui-fg-base"
+                  >
+                    Documentation
+                  </a>
+                </li>
+                <li>
+                  <span 
+                    onClick={() => alert('How are you?')}
+                    className="hover:text-ui-fg-base cursor-pointer"
+                  >
+                    Source code
+                  </span> 
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-
-      {/* Popup logic */}
-      {isPopupOpen && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50">
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg p-4">
-            <p>How are you?</p>
-            <button onClick={handleClosePopup}>Close</button>
-          </div>
+        <div className="flex w-full mb-16 justify-between text-ui-fg-muted">
+          <Text className="txt-compact-small">
+            © {new Date().getFullYear()} Medusa Store. All rights reserved.
+          </Text>
+          <MedusaCTA />
         </div>
-      )}
-
-      <div className="flex w-full mb-16 justify-between text-ui-fg-muted">
-        <Text className="txt-compact-small">
-          © {new Date().getFullYear()} Medusa Store. All rights reserved.
-        </Text>
-        <MedusaCTA />
       </div>
     </footer>
-  );
+  )
 }
