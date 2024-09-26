@@ -7,7 +7,7 @@ import MedusaCTA from "@modules/layout/components/medusa-cta";
 
 import { useState } from 'react'; // Import useState hook for popup state
 
-// Mark the component as a Client Component
+// Mark the component as a Client Component (on a separate line)
 use client;
 
 export default async function Footer() {
