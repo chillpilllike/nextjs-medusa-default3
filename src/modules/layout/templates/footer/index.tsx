@@ -5,6 +5,7 @@ import { Fragment } from "react";  // Needed for the Transition component
 import { getCategoriesList, getCollectionsList } from "@lib/data";
 import LocalizedClientLink from "@modules/common/components/localized-client-link";
 import MedusaCTA from "@modules/layout/components/medusa-cta";
+import React, { createContext } from 'react';
 
 export default async function Footer() {
   const { collections } = await getCollectionsList(0, 6);
