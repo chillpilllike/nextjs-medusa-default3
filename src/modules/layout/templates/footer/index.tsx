@@ -1,8 +1,7 @@
-
 import { Text, clx } from "@medusajs/ui"
-import { Popover, Transition } from "@headlessui/react"; // Importing Popover and Transition
-import { Fragment } from "react";
+
 import { getCategoriesList, getCollectionsList } from "@lib/data"
+
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import MedusaCTA from "@modules/layout/components/medusa-cta"
 
@@ -23,57 +22,129 @@ export default async function Footer() {
             </LocalizedClientLink>
           </div>
           <div className="text-small-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">
-            {/* Footer Links */}
-            <div className="flex flex-col gap-y-2">
-              <span className="txt-small-plus txt-ui-fg-base">Documentation</span>
-              <ul className="grid grid-cols-1 gap-2">
-                <li>
-                  <LocalizedClientLink href="/docs">Docs</LocalizedClientLink>
-                </li>
-                <li>
-                  <LocalizedClientLink href="/tutorials">Tutorials</LocalizedClientLink>
-                </li>
-              </ul>
-            </div>
-            <div className="flex flex-col gap-y-2">
-              <span className="txt-small-plus txt-ui-fg-base">Community</span>
-              <ul className="grid grid-cols-1 gap-2">
-                <li>
-                  <LocalizedClientLink href="/community">Forums</LocalizedClientLink>
-                </li>
-                <li>
-                  <LocalizedClientLink href="/events">Events</LocalizedClientLink>
-                </li>
-              </ul>
-            </div>
-            {/* Popover Logic for "Source Code" */}
-            <div className="flex flex-col gap-y-2">
-              <span className="txt-small-plus txt-ui-fg-base">Source Code</span>
-              <Popover className="relative">
-                <Popover.Button className="text-small-regular text-ui-fg-subtle">
-                  Source Code
-                </Popover.Button>
+            {product_categories && product_categories?.length > 0 && (
+              <div className="flex flex-col gap-y-2">
+                <span className="txt-small-plus txt-ui-fg-base">
+                  Categories
+                </span>
+                <ul className="grid grid-cols-1 gap-2" data-testid="footer-categories">
+                  {product_categories?.slice(0, 6).map((c) => {
+                    if (c.parent_category) {
+                      return
+                    }
 
-                <Transition
-                  as={Fragment}
-                  enter="transition ease-out duration-200"
-                  enterFrom="opacity-0 translate-y-1"
-                  enterTo="opacity-100 translate-y-0"
-                  leave="transition ease-in duration-150"
-                  leaveFrom="opacity-100 translate-y-0"
-                  leaveTo="opacity-0 translate-y-1"
+                    const children =
+                      c.category_children?.map((child) => ({
+                        name: child.name,
+                        handle: child.handle,
+                        id: child.id,
+                      })) || null
+
+                    return (
+                      <li
+                        className="flex flex-col gap-2 text-ui-fg-subtle txt-small"
+                        key={c.id}
+                      >
+                        <LocalizedClientLink
+                          className={clx(
+                            "hover:text-ui-fg-base",
+                            children && "txt-small-plus"
+                          )}
+                          href={`/categories/${c.handle}`}
+                          data-testid="category-link"
+                        >
+                          {c.name}
+                        </LocalizedClientLink>
+                        {children && (
+                          <ul className="grid grid-cols-1 ml-3 gap-2">
+                            {children &&
+                              children.map((child) => (
+                                <li key={child.id}>
+                                  <LocalizedClientLink
+                                    className="hover:text-ui-fg-base"
+                                    href={`/categories/${child.handle}`}
+                                    data-testid="category-link"
+                                  >
+                                    {child.name}
+                                  </LocalizedClientLink>
+                                </li>
+                              ))}
+                          </ul>
+                        )}
+                      </li>
+                    )
+                  })}
+                </ul>
+              </div>
+            )}
+            {collections && collections.length > 0 && (
+              <div className="flex flex-col gap-y-2">
+                <span className="txt-small-plus txt-ui-fg-base">
+                  Collections
+                </span>
+                <ul
+                  className={clx(
+                    "grid grid-cols-1 gap-2 text-ui-fg-subtle txt-small",
+                    {
+                      "grid-cols-2": (collections?.length || 0) > 3,
+                    }
+                  )}
                 >
-                  <Popover.Panel className="absolute z-10 w-48 px-4 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0">
-                    <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                      <div className="relative p-4 bg-white">
-                        <p className="text-sm text-gray-700">How are you</p>
-                      </div>
-                    </div>
-                  </Popover.Panel>
-                </Transition>
-              </Popover>
+                  {collections?.slice(0, 6).map((c) => (
+                    <li key={c.id}>
+                      <LocalizedClientLink
+                        className="hover:text-ui-fg-base"
+                        href={`/collections/${c.handle}`}
+                      >
+                        {c.title}
+                      </LocalizedClientLink>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            <div className="flex flex-col gap-y-2">
+              <span className="txt-small-plus txt-ui-fg-base">Medusa</span>
+              <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
+                <li>
+                  <a
+                    href="https://github.com/medusajs"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-ui-fg-base"
+                  >
+                    GitHub
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://docs.medusajs.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-ui-fg-base"
+                  >
+                    Documentation
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/medusajs/nextjs-starter-medusa"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-ui-fg-base"
+                  >
+                    Source code
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
+        </div>
+        <div className="flex w-full mb-16 justify-between text-ui-fg-muted">
+          <Text className="txt-compact-small">
+            © {new Date().getFullYear()} Medusa Store. All rights reserved.
+          </Text>
+          <MedusaCTA />
         </div>
       </div>
     </footer>
