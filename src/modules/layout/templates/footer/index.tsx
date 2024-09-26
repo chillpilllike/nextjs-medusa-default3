@@ -1,5 +1,3 @@
-"use client";
-
 import { Text, clx } from "@medusajs/ui";
 import { Popover, Transition } from "@headlessui/react";  // Added for pop-up functionality
 import { XMark } from "@medusajs/icons";  // Added for close icon
