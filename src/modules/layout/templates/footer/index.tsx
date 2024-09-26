@@ -1,15 +1,18 @@
-import { Text, clx } from "@medusajs/ui"
+import { Text, clx } from "@medusajs/ui";
 
-import { getCategoriesList, getCollectionsList } from "@lib/data"
+import { getCategoriesList, getCollectionsList } from "@lib/data";
 
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
-import MedusaCTA from "@modules/layout/components/medusa-cta"
+import LocalizedClientLink from "@modules/common/components/localized-client-link";
+import MedusaCTA from "@modules/layout/components/medusa-cta";
 
 import { useState } from 'react'; // Import useState hook for popup state
 
+// Mark the component as a Client Component
+use client;
+
 export default async function Footer() {
-  const { collections } = await getCollectionsList(0, 6)
-  const { product_categories } = await getCategoriesList(0, 6)
+  const { collections } = await getCollectionsList(0, 6);
+  const { product_categories } = await getCategoriesList(0, 6);
 
   const [isPopupOpen, setIsPopupOpen] = useState(false); // State for popup
 
@@ -72,5 +75,5 @@ export default async function Footer() {
         <MedusaCTA />
       </div>
     </footer>
-  )
+  );
 }
