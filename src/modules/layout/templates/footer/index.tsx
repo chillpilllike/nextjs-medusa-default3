@@ -1,6 +1,4 @@
 
-"use client"; // Only add this if necessary for client-side logic
-
 import { Text } from "@medusajs/ui";
 import { Popover, Transition } from "@headlessui/react"; // For pop-up functionality
 import { XMark } from "@medusajs/icons"; // Close icon
