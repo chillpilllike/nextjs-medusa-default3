@@ -1,15 +1,16 @@
-import { Text, clx } from "@medusajs/ui"
-import { Popover, Transition } from "@headlessui/react";
-import { Fragment } from "react";
+"use client";
 
-import { getCategoriesList, getCollectionsList } from "@lib/data"
-
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
-import MedusaCTA from "@modules/layout/components/medusa-cta"
+import { Text, clx } from "@medusajs/ui";
+import { Popover, Transition } from "@headlessui/react";  // Added for pop-up functionality
+import { XMark } from "@medusajs/icons";  // Added for close icon
+import { Fragment } from "react";  // Needed for the Transition component
+import { getCategoriesList, getCollectionsList } from "@lib/data";
+import LocalizedClientLink from "@modules/common/components/localized-client-link";
+import MedusaCTA from "@modules/layout/components/medusa-cta";
 
 export default async function Footer() {
-  const { collections } = await getCollectionsList(0, 6)
-  const { product_categories } = await getCategoriesList(0, 6)
+  const { collections } = await getCollectionsList(0, 6);
+  const { product_categories } = await getCategoriesList(0, 6);
 
   return (
     <footer className="border-t border-ui-border-base w-full">
@@ -32,7 +33,7 @@ export default async function Footer() {
                 <ul className="grid grid-cols-1 gap-2" data-testid="footer-categories">
                   {product_categories?.slice(0, 6).map((c) => {
                     if (c.parent_category) {
-                      return
+                      return;
                     }
 
                     const children =
@@ -40,7 +41,7 @@ export default async function Footer() {
                         name: child.name,
                         handle: child.handle,
                         id: child.id,
-                      })) || null
+                      })) || null;
 
                     return (
                       <li
@@ -74,7 +75,7 @@ export default async function Footer() {
                           </ul>
                         )}
                       </li>
-                    )
+                    );
                   })}
                 </ul>
               </div>
@@ -118,39 +119,57 @@ export default async function Footer() {
                     GitHub
                   </a>
                 </li>
-         <li>
-  <Popover className="h-full flex">
-    {({ open, close }) => (
-      <>
-        <div className="relative flex h-full">
-          <Popover.Button className="relative h-full flex items-center transition-all ease-out duration-200 focus:outline-none hover:text-ui-fg-base">
-            Documentation
-          </Popover.Button>
-        </div>
-
-        <Transition>
-          <Popover.Panel className="absolute z-10 w-screen max-w-sm p-4 bg-white shadow-lg">
-            <p>
-              We are committed to delivering a curated selection of high-quality products designed 
-              to meet your needs. Our focus is on providing a seamless, secure, and efficient online 
-              shopping experience, backed by exceptional customer support. We continuously strive 
-              to exceed expectations and build lasting relationships with our valued customers.
-            </p>
-          </Popover.Panel>
-        </Transition>
-      </>
-    )}
-  </Popover>
-</li>
                 <li>
                   <a
-                    href="https://github.com/medusajs/nextjs-starter-medusa"
+                    href="https://docs.medusajs.com"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:text-ui-fg-base"
                   >
-                    Source code
+                    Documentation
                   </a>
+                </li>
+
+                {/* Source code link with pop-up */}
+                <li>
+                  <Popover className="relative inline-block">
+                    {({ open, close }) => (
+                      <>
+                        <Popover.Button className="hover:text-ui-fg-base">
+                          Source code
+                        </Popover.Button>
+
+                        <Transition
+                          show={open}
+                          as={Fragment}
+                          enter="transition ease-out duration-150"
+                          enterFrom="opacity-0"
+                          enterTo="opacity-100 backdrop-blur-2xl"
+                          leave="transition ease-in duration-150"
+                          leaveFrom="opacity-100 backdrop-blur-2xl"
+                          leaveTo="opacity-0"
+                        >
+                          <Popover.Panel className="absolute z-10 w-64 p-4 bg-white text-black shadow-lg rounded-lg mt-2">
+                            <div className="flex justify-between items-center">
+                              <h3 className="text-lg font-semibold">Source Code</h3>
+                              <button onClick={() => close()} className="ml-4">
+                                <XMark className="w-5 h-5 text-black" />
+                              </button>
+                            </div>
+                            <p className="mt-2 text-sm">
+                              You can find the source code for this project at the following link:
+                              <a
+                                href="https://github.com/medusajs/nextjs-starter-medusa"
+                                className="text-blue-600 underline"
+                              >
+                                GitHub Repository
+                              </a>.
+                            </p>
+                          </Popover.Panel>
+                        </Transition>
+                      </>
+                    )}
+                  </Popover>
                 </li>
               </ul>
             </div>
@@ -164,5 +183,5 @@ export default async function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
