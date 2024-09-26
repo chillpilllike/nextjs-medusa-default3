@@ -1,3 +1,5 @@
+'use client'; // This line is crucial to enable client-side interactivity
+
 import { Text, clx } from "@medusajs/ui"
 
 import { getCategoriesList, getCollectionsList } from "@lib/data"
