@@ -1,4 +1,4 @@
-import { FocusModal, Heading, Label, Button, Text, clx, useToggleState } from "@medusajs/ui"
+import { FocusModal, Heading, Label, Button, Input, Text, clx, useToggleState } from "@medusajs/ui"
 
 import { getCategoriesList, getCollectionsList } from "@lib/data"
 
