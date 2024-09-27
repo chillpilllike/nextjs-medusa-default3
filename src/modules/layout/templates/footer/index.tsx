@@ -9,7 +9,6 @@ import MedusaCTA from "@modules/layout/components/medusa-cta"
 export default async function Footer() {
   const { collections } = await getCollectionsList(0, 6)
   const { product_categories } = await getCategoriesList(0, 6)
-  const [open, setOpen] = useState(false)
 
   return (
     <footer className="border-t border-ui-border-base w-full">
@@ -109,14 +108,31 @@ export default async function Footer() {
               <span className="txt-small-plus txt-ui-fg-base">Medusa</span>
               <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
                <li>
-   <FocusModal 
-      open={open} 
-      onOpenChange={setOpen}
-    >
-     <FocusModal.Trigger>Trigger</FocusModal.Trigger>
+   <FocusModal>
+      <FocusModal.Trigger asChild>
+        <Button>Edit Variant</Button>
+      </FocusModal.Trigger>
       <FocusModal.Content>
-        <FocusModal.Header>Title</FocusModal.Header>
-        <FocusModal.Body>Content</FocusModal.Body>
+        <FocusModal.Header>
+          <Button>Save</Button>
+        </FocusModal.Header>
+        <FocusModal.Body className="flex flex-col items-center py-16">
+          <div className="flex w-full max-w-lg flex-col gap-y-8">
+            <div className="flex flex-col gap-y-1">
+              <Heading>Create API key</Heading>
+              <Text className="text-ui-fg-subtle">
+                Create and manage API keys. You can create multiple keys to
+                organize your applications.
+              </Text>
+            </div>
+            <div className="flex flex-col gap-y-2">
+              <Label htmlFor="key_name" className="text-ui-fg-subtle">
+                Key name
+              </Label>
+              <Input id="key_name" placeholder="my_app" />
+            </div>
+          </div>
+        </FocusModal.Body>
       </FocusModal.Content>
     </FocusModal>
 </li>
