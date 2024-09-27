@@ -1,4 +1,4 @@
-import { Text, clx } from "@medusajs/ui"
+import { FocusModal, Text, clx } from "@medusajs/ui"
 
 import { getCategoriesList, getCollectionsList } from "@lib/data"
 
@@ -113,7 +113,14 @@ export default async function Footer() {
                     rel="noreferrer"
                     className="hover:text-ui-fg-base"
                   >
-                    GitHub
+                  <FocusModal>
+  <FocusModal.Trigger>Privacy Policy</FocusModal.Trigger>
+  <FocusModal.Content>
+    <FocusModal.Header>Title</FocusModal.Header>
+    <FocusModal.Body>Content</FocusModal.Body>
+  </FocusModal.Content>
+</FocusModal>
+                    
                   </a>
                 </li>
                 <li>
