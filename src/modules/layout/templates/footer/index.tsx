@@ -1,4 +1,4 @@
-import { FocusModal, Heading, Label, Button, Text, clx, useToggleState } from "@medusajs/ui"
+import { Text, clx } from "@medusajs/ui"
 
 import { getCategoriesList, getCollectionsList } from "@lib/data"
 
@@ -113,25 +113,7 @@ export default async function Footer() {
                     rel="noreferrer"
                     className="hover:text-ui-fg-base"
                   >
-                     <FocusModal>
-      <FocusModal.Trigger asChild>
-        Privacy Policy
-      </FocusModal.Trigger>
-      <FocusModal.Content>
-        <FocusModal.Header>
-          <Button>Save</Button>
-        </FocusModal.Header>
-        <FocusModal.Body className="flex flex-col items-center py-16">
-          <div className="flex w-full max-w-lg flex-col gap-y-8">
-            <div className="flex flex-col gap-y-1">
-              <Heading>Privacy Policy</Heading>
-              <Text className="text-ui-fg-subtle">
-                In Next.js 14 using the App Router, pages are stored in the app directory, and each page needs to be inside a folder. Therefore, place your Privacy Policy page inside the app/privacy-policy folder, and the file should be named page.tsx
-              </Text>
-            </div>
-          </div>
-        </FocusModal.Body>
-      </FocusModal.Content>
+                    GitHub
                   </a>
                 </li>
                 <li>
