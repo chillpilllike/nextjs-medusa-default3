@@ -3,7 +3,7 @@ import { BarsThree } from "@medusajs/icons"
 import { Popover, Transition } from "@headlessui/react"
 import { ArrowRightMini, XMark } from "@medusajs/icons"
 import { Region } from "@medusajs/medusa"
-import { Button, Text, clx, useToggleState } from "@medusajs/ui"
+import { FocusModal, Heading, Label, Button, Text, clx, useToggleState } from "@medusajs/ui"
 import { Fragment } from "react"
 
 
