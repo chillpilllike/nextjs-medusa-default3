@@ -1,4 +1,5 @@
-import { Text, clx } from "@medusajs/ui"
+import { FocusModal, Text, clx } from "@medusajs/ui"
+import { useState, Fragment } from "react"
 
 import { getCategoriesList, getCollectionsList } from "@lib/data"
 
@@ -106,15 +107,18 @@ export default async function Footer() {
             <div className="flex flex-col gap-y-2">
               <span className="txt-small-plus txt-ui-fg-base">Medusa</span>
               <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
-                <li>
-                  <a
-                    href="https://github.com/medusajs"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-ui-fg-base"
-                  >
-                    GitHub
-                  </a>
+               <li>
+                  <FocusModal>
+                    <FocusModal.Trigger className="hover:text-ui-fg-base">
+                      GitHub
+                    </FocusModal.Trigger>
+                    <FocusModal.Content>
+                      <FocusModal.Header>Title</FocusModal.Header>
+                      <FocusModal.Body>
+                        Content or description related to Medusa's GitHub repository.
+                      </FocusModal.Body>
+                    </FocusModal.Content>
+                  </FocusModal>
                 </li>
                 <li>
                   <a
