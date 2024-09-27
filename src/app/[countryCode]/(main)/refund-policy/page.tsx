@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 const RefundPolicy = () => {
    return (
-    <div className="max-w-4xl mx-auto p-6 bg-white">
+     <div className="max-w-4xl mx-auto p-6 bg-white">
   <h1 className="text-4xl font-bold mb-6 text-gray-900">Refund Policy</h1>
 
   <section className="mb-8">
