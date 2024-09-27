@@ -107,14 +107,18 @@ export default async function Footer() {
               <span className="txt-small-plus txt-ui-fg-base">Medusa</span>
               <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
                 <li>
-                 <FocusModal>
-  <FocusModal.Trigger>Privacy Policy</FocusModal.Trigger>
-  <FocusModal.Content>
-    <FocusModal.Header>Title</FocusModal.Header>
-    <FocusModal.Body>Content</FocusModal.Body>
-  </FocusModal.Content>
-</FocusModal>
-                </li>
+            <FocusModal>
+              <FocusModal.Trigger> {/* No need for 'asChild' anymore */}
+                <span className="hover:text-ui-fg-base cursor-pointer"> 
+                  GitHub 
+                </span>
+              </FocusModal.Trigger>
+              <FocusModal.Content>
+                <FocusModal.Header>Modal Title</FocusModal.Header>
+                <FocusModal.Body>This is the modal content.</FocusModal.Body>
+              </FocusModal.Content>
+            </FocusModal>
+          </li>
                 <li>
                   <a
                     href="https://docs.medusajs.com"
