@@ -61,7 +61,7 @@ export default async function Nav() {
                   data-testid="nav-cart-link"
                 >
                   <Button variant="secondary">
-            Cart (0) <ShoppingCart />
+            <ShoppingCart /> (0) 
             </Button>
                 </LocalizedClientLink>
               }
