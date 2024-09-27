@@ -65,7 +65,7 @@ export default async function Nav() {
                 </LocalizedClientLink>
               }
             >
-              <ShoppingCart />
+              <CartButton />
             </Suspense>
           </div>
         </nav>
