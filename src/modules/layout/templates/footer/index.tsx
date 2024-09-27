@@ -1,5 +1,4 @@
 import { FocusModal, Text, clx } from "@medusajs/ui"
-import { useState, Fragment } from "react"
 
 import { getCategoriesList, getCollectionsList } from "@lib/data"
 
