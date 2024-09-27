@@ -108,7 +108,7 @@ export default async function Footer() {
               <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
                <li>
                   <FocusModal>
-                    <FocusModal.Trigger className="hover:text-ui-fg-base">
+                    <FocusModal.Trigger>
                       GitHub
                     </FocusModal.Trigger>
                     <FocusModal.Content>
