@@ -107,21 +107,13 @@ export default async function Footer() {
               <span className="txt-small-plus txt-ui-fg-base">Medusa</span>
               <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
                 <li>
-                  <a
-                    href="https://github.com/medusajs"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-ui-fg-base"
-                  >
-                  <FocusModal>
+                 <FocusModal>
   <FocusModal.Trigger>Privacy Policy</FocusModal.Trigger>
   <FocusModal.Content>
     <FocusModal.Header>Title</FocusModal.Header>
     <FocusModal.Body>Content</FocusModal.Body>
   </FocusModal.Content>
 </FocusModal>
-                    
-                  </a>
                 </li>
                 <li>
                   <a
