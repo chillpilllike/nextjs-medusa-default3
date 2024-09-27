@@ -20,7 +20,7 @@ const Hero = () => {
           </Heading>
         </span>
         <a
-          href="/"
+          href="/store"
           target="_blank"
         >
           <Button variant="secondary">
