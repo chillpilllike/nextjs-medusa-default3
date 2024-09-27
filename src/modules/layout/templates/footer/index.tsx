@@ -119,6 +119,7 @@ export default async function Footer() {
     </FocusModal.Content>
   </FocusModal>
 </li>
+                <li>
                   <a
                     href="https://docs.medusajs.com"
                     target="_blank"
