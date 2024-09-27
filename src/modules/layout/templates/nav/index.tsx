@@ -1,4 +1,5 @@
 import { ShoppingCart, MagnifyingGlass, User } from "@medusajs/icons"
+import { FocusModal, Heading, Label, Button, Text, clx, useToggleState } from "@medusajs/ui"
 import { Suspense } from "react"
 
 import { listRegions } from "@lib/data"
