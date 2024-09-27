@@ -15,13 +15,13 @@ export const metadata: Metadata = {
 
 const RefundPolicy = () => {
    return (
-     <div className="max-w-4xl mx-auto p-6 bg-white">
+  <div className="max-w-4xl mx-auto p-6 bg-white">
   <h1 className="text-4xl font-bold mb-6 text-gray-900">Refund Policy</h1>
 
   <section className="mb-8">
     <h2 className="text-2xl font-semibold mb-4 text-gray-800">Overview</h2>
     <p className="text-gray-700">
-      Thank you for shopping at our store. If you are not entirely satisfied with your purchase, we're here to help. Our products can be returned within 30 days of the original purchase.
+      Thank you for shopping at our store. If you are not entirely satisfied with your purchase, we&apos;re here to help. Our products can be returned within 30 days of the original purchase.
     </p>
   </section>
 
@@ -33,7 +33,7 @@ const RefundPolicy = () => {
     <ul className="list-disc pl-6 text-gray-700">
       <li>The product was purchased in the last 30 days.</li>
       <li>The product is in its original packaging.</li>
-      <li>The product isn't used or damaged.</li>
+      <li>The product isn&apos;t used or damaged.</li>
       <li>You have the receipt or proof of purchase.</li>
     </ul>
   </section>
@@ -73,7 +73,7 @@ const RefundPolicy = () => {
       Upon receiving the product, we will inspect it and notify you that we have received your returned item. We will immediately notify you of the status of your refund after inspecting the item.
     </p>
     <p className="text-gray-700">
-      If your return is approved, we will initiate a refund to your credit card (or original method of payment). You will receive the credit within a certain number of days, depending on your card issuer's policies. In some cases we may refund to your bank account via wire transfer.
+      If your return is approved, we will initiate a refund to your credit card (or original method of payment). You will receive the credit within a certain number of days, depending on your card issuer&apos;s policies. In some cases, we may refund to your bank account via wire transfer.
     </p>
   </section>
 
