@@ -15,55 +15,86 @@ export const metadata: Metadata = {
 
 const RefundPolicy = () => {
    return (
-    <div className="flex flex-col gap-6 items-center justify-center min-h-[calc(100vh-64px)] p-8">
-      <div className="w-full max-w-4xl bg-white p-6 border border-gray-200 rounded-lg shadow-md">
-        <h1 className="text-3xl font-semibold text-gray-900 mb-4 text-center">Refund Policy</h1>
+    <div className="max-w-4xl mx-auto p-6 bg-white">
+  <h1 className="text-4xl font-bold mb-6 text-gray-900">Refund Policy</h1>
 
-        <p className="text-base text-gray-600 mb-6 text-center">Effective Date: [Insert Date]</p>
+  <section className="mb-8">
+    <h2 className="text-2xl font-semibold mb-4 text-gray-800">Overview</h2>
+    <p className="text-gray-700">
+      Thank you for shopping at our store. If you are not entirely satisfied with your purchase, we're here to help. Our products can be returned within 30 days of the original purchase.
+    </p>
+  </section>
 
-        <h2 className="text-xl font-medium text-gray-800 mb-4">1. Overview</h2>
-        <p className="text-base text-gray-600 mb-4">
-          We value customer satisfaction and aim to offer products and services of the highest quality. If you are not fully satisfied with your purchase, we are here to help. This policy outlines the conditions under which we accept refunds.
-        </p>
+  <section className="mb-8">
+    <h2 className="text-2xl font-semibold mb-4 text-gray-800">Eligibility for Returns</h2>
+    <p className="text-gray-700">
+      To qualify for a return, please make sure that:
+    </p>
+    <ul className="list-disc pl-6 text-gray-700">
+      <li>The product was purchased in the last 30 days.</li>
+      <li>The product is in its original packaging.</li>
+      <li>The product isn't used or damaged.</li>
+      <li>You have the receipt or proof of purchase.</li>
+    </ul>
+  </section>
 
-        <h2 className="text-xl font-medium text-gray-800 mb-4">2. Refund Eligibility</h2>
-        <p className="text-base text-gray-600 mb-4">
-          Refunds will be processed only if:
-        </p>
-        <ul className="list-disc list-inside text-base text-gray-600 mb-6">
-          <li>The item is unused, in the same condition as received, and in its original packaging.</li>
-          <li>You provide a valid receipt or proof of purchase.</li>
-          <li>The return request is made within [X] days of purchase.</li>
+  <section className="mb-8">
+    <h2 className="text-2xl font-semibold mb-4 text-gray-800">Products that Cannot be Returned</h2>
+    <p className="text-gray-700">
+      Some items are not eligible for returns, including:
+    </p>
+    <ul className="list-disc pl-6 text-gray-700">
+      <li>Gift cards.</li>
+      <li>Downloadable software products.</li>
+      <li>Some health and personal care items.</li>
+      <li>Any item not in its original condition, damaged, or missing parts for reasons not due to our error.</li>
+      <li>Any item that is returned more than 30 days after delivery.</li>
+    </ul>
+  </section>
+
+  <section className="mb-8">
+    <h2 className="text-2xl font-semibold mb-4 text-gray-800">Initiating a Return</h2>
+    <ol className="list-decimal pl-6 text-gray-700">
+      <li className="mb-4">
+        <strong>Contact Us:</strong> Before sending the product back to us, please contact us:
+        <ul className="list-disc pl-6 text-gray-700">
+          <li>By visiting this page on our website: <a href="/customer-service" className="text-blue-500 underline">Contact Us</a></li>
         </ul>
+      </li>
+      <li>
+        <strong>Send the Product:</strong> After contacting us, you will be instructed on how and where to send the product. Shipping costs are refundable. If you receive a refund, the cost of return shipping will not be deducted from your refund.
+      </li>
+    </ol>
+  </section>
 
-        <h2 className="text-xl font-medium text-gray-800 mb-4">3. Non-Refundable Items</h2>
-        <ul className="list-disc list-inside text-base text-gray-600 mb-6">
-          <li>Perishable items (e.g., food, flowers).</li>
-          <li>Gift cards and downloadable software products.</li>
-          <li>Personal care items (e.g., cosmetics).</li>
-        </ul>
+  <section className="mb-8">
+    <h2 className="text-2xl font-semibold mb-4 text-gray-800">Processing Your Return</h2>
+    <p className="text-gray-700">
+      Upon receiving the product, we will inspect it and notify you that we have received your returned item. We will immediately notify you of the status of your refund after inspecting the item.
+    </p>
+    <p className="text-gray-700">
+      If your return is approved, we will initiate a refund to your credit card (or original method of payment). You will receive the credit within a certain number of days, depending on your card issuer's policies. In some cases we may refund to your bank account via wire transfer.
+    </p>
+  </section>
 
-        <h2 className="text-xl font-medium text-gray-800 mb-4">4. Refund Process</h2>
-        <p className="text-base text-gray-600 mb-4">
-          To start a return, please contact our customer service team at <a href="mailto:support@yourstore.com" className="text-blue-600 hover:underline">support@yourstore.com</a>. If your return is accepted, we will provide instructions for sending the item back to us.
-        </p>
+  <section className="mb-8">
+    <h2 className="text-2xl font-semibold mb-4 text-gray-800">Exchanges (if applicable)</h2>
+    <p className="text-gray-700">
+      If your product is defective or damaged and you need to exchange it for the same item, then contact us <a href="/customer-service" className="text-blue-500 underline">Contact us</a> and send your item to the address we provide.
+    </p>
+  </section>
 
-        <h2 className="text-xl font-medium text-gray-800 mb-4">5. Late or Missing Refunds</h2>
-        <p className="text-base text-gray-600 mb-6">
-          If you haven’t received a refund after the processing time, check your bank account or contact your credit card provider. If the issue persists, please contact us at <a href="mailto:support@yourstore.com" className="text-blue-600 hover:underline">support@yourstore.com</a>.
-        </p>
-
-        <h2 className="text-xl font-medium text-gray-800 mb-4">6. Shipping Returns</h2>
-        <p className="text-base text-gray-600 mb-6">
-          Customers are responsible for paying shipping costs for returning items. Shipping costs are non-refundable. If you receive a refund, the cost of return shipping will be deducted from your refund.
-        </p>
-
-        <h2 className="text-xl font-medium text-gray-800 mb-4">7. Contact Us</h2>
-        <p className="text-base text-gray-600 mb-6">
-          If you have any questions about our refund policy, please contact us at <a href="mailto:support@yourstore.com" className="text-blue-600 hover:underline">support@yourstore.com</a>.
-        </p>
-      </div>
-    </div>
+  <section>
+    <h2 className="text-2xl font-semibold mb-4 text-gray-800">Contact Us</h2>
+    <p className="text-gray-700">
+      If you have any questions about our Refund Policy, please contact us:
+    </p>
+    <ul className="list-disc pl-6 text-gray-700">
+      <li>By visiting this page on our website: <a href="/customer-service" className="text-blue-500 underline">Contact us</a></li>
+      <li>By online chat support. Click the chat button at the bottom left of every page.</li>
+    </ul>
+  </section>
+</div>
   )
 }
 
