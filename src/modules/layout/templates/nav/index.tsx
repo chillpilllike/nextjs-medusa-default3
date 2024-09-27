@@ -1,3 +1,4 @@
+import { ShoppingCart, MagnifyingGlass, User } from "@medusajs/icons"
 import { Suspense } from "react"
 
 import { listRegions } from "@lib/data"
@@ -37,7 +38,9 @@ export default async function Nav() {
                   scroll={false}
                   data-testid="nav-search-link"
                 >
-                  Search
+                  <Button variant="secondary">
+            Search <MagnifyingGlass />
+            </Button>
                 </LocalizedClientLink>
               )}
               <LocalizedClientLink
@@ -45,7 +48,9 @@ export default async function Nav() {
                 href="/account"
                 data-testid="nav-account-link"
               >
-                Account
+                <Button variant="secondary">
+            Account <User />
+            </Button>
               </LocalizedClientLink>
             </div>
             <Suspense
@@ -55,7 +60,9 @@ export default async function Nav() {
                   href="/cart"
                   data-testid="nav-cart-link"
                 >
-                  Cart (0)
+                  <Button variant="secondary">
+            Cart (0) <ShoppingCart />
+            </Button>
                 </LocalizedClientLink>
               }
             >
