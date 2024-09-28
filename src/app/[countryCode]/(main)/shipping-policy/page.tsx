@@ -33,8 +33,8 @@ const ShippingPolicy = () => {
           {/* Add more shipping methods as needed */}
         </ul>
         <p>
-          Shipping costs are calculated based on the weight of your order and your shipping destination. You will be able to see the exact shipping cost during checkout before you complete your purchase. Sometimes the product weight may be calculated based on the product dimensions and courier services charge differently.
-        </p>
+          Shipping costs are calculated based on the weight of your order and your shipping destination. You will be able to see the exact shipping cost during checkout before you complete your purchase. Sometimes the product&apos;s weight may be calculated based on the product dimensions and courier services charge differently.
+        </p> {/* Escaped single quote here */}
       </div>
 
       <div className="mb-4">
@@ -56,14 +56,14 @@ const ShippingPolicy = () => {
       <div className="mb-4">
         <h2 className="text-2xl font-semibold mb-2">International Shipping</h2>
         <p>
-          We currently offer international shipping to selective countries. Please note that international shipments may be subject to customs duties and taxes, which are the responsibility of the   
- recipient.
+          We currently offer international shipping to selective countries. Please note that international shipments may be subject to customs duties and taxes, which are the responsibility   
+ of the recipient.
         </p>
       </div>
 
       <p>
-          For any query related to shiiping you can contact us via our chat support.
-        </p>
+        For any query related to shipping you can contact us via our chat support.
+      </p>
     </div>
   )
 }
