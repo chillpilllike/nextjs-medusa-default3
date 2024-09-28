@@ -13,7 +13,7 @@ export default async function Footer() {
   <footer className="border-t border-ui-border-base w-full">
       <div className="content-container flex flex-col w-full">
         <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-40">
-          <div>
+          <div className="max-w-xs">
             <LocalizedClientLink
               href="/"
               className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
@@ -21,8 +21,8 @@ export default async function Footer() {
               Medusa Store
             </LocalizedClientLink>
 
-            {/* New text added just below the "Medusa Store" link */}
-            <p className="mt-2 text-ui-fg-subtle">
+            {/* New text added just below the "Medusa Store" link with a max width to prevent overflow */}
+            <p className="mt-2 text-ui-fg-subtle text-sm">
               Welcome to our store, your go-to destination for high-quality, unique products curated with care. We pride ourselves on delivering exceptional customer service, fast shipping, and a seamless shopping experience.
             </p>
           </div>
