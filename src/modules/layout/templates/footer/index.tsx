@@ -140,6 +140,16 @@ export default async function Footer() {
                     Refund Policy
                   </a>
                 </li>
+                 <li>
+                  <a
+                    href="/shipping-policy"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-ui-fg-base"
+                  >
+                    Shipping Policy
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
