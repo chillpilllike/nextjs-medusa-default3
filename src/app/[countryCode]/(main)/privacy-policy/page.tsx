@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 }
 
 
-const RefundPolicy = () => {
+const PrivacyPolicy = () => {
    return (
  <div className="container mx-auto py-16 px-4">
             <h1 className="text-3xl font-bold mb-8 text-center">Privacy Policy</h1>
@@ -126,4 +126,4 @@ const RefundPolicy = () => {
   )
 }
 
-export default RefundPolicy
+export default PrivacyPolicy
