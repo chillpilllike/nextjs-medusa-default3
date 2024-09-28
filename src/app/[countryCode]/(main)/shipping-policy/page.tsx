@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 const ShippingPolicy = () => {
    return (
-  <div className="container mx-auto p-4">
+   <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-4">Shipping Policy</h1>
 
       <p className="mb-4">
@@ -34,7 +34,7 @@ const ShippingPolicy = () => {
         </ul>
         <p>
           Shipping costs are calculated based on the weight of your order and your shipping destination. You will be able to see the exact shipping cost during checkout before you complete your purchase. Sometimes the product&apos;s weight may be calculated based on the product dimensions and courier services charge differently.
-        </p> {/* Escaped single quote here */}
+        </p>
       </div>
 
       <div className="mb-4">
