@@ -35,9 +35,10 @@ const TermsPolicy = () => {
           <ul>
             <li>Use the website in any way that violates any applicable federal, state, local, or international law or regulation.</li>
             <li>
-              Engage in any conduct that restricts or inhibits anyone's use or enjoyment of the   
- website, or which, as determined by us, may harm the website or users of the website or expose them to liability.
+              Engage in any conduct that restricts or inhibits   
+ anyone&apos;s use or enjoyment of the website, or which, as determined by us, may harm the website or users of the website or expose them to liability.
             </li>   
+
 
             <li>Use the website to impersonate any person or entity, or falsely state or otherwise misrepresent your affiliation with a person or   
  entity.</li>
@@ -108,7 +109,7 @@ const TermsPolicy = () => {
           <h3>Intellectual Property</h3>
           <p>
             All content on this website, including but not limited to text, graphics, logos, images, and software, is the property of   
- our or its content suppliers and is protected by United States and international copyright laws.   
+ our company or its content suppliers and is protected by United States and international copyright laws.   
 
           </p>
         </li>
@@ -116,8 +117,8 @@ const TermsPolicy = () => {
         <li>
           <h3>Disclaimer of Warranties</h3>
           <p>
-            This website and all products and services offered on this website are provided on an "as is" and "as available" basis. Our website makes no representations or warranties of any kind, express or implied,   
- as to the operation of this website or the information, content, materials, or products included on this website.
+            This website and all products and services offered on this website are provided on an &quot;as is&quot; and &quot;as available&quot; basis. Our website makes no representations or warranties of any kind, express or implied, as to the operation of this website or the information, content, materials, or products included on this   
+ website.
           </p>   
 
         </li>
@@ -125,18 +126,16 @@ const TermsPolicy = () => {
         <li>
           <h3>Limitation of Liability</h3>
           <p>
-            In no event shall our company or its directors, officers, employees, or agents be liable for any direct, indirect, incidental, special, or consequential damages   
- arising out of or in connection with the use   
- of this website or the products or services offered on this website.
+            In no event shall our company or its directors, officers, employees, or agents be liable for any direct, indirect, incidental, special, or consequential damages arising out of or in connection with   
+ the use of this website or the products or services offered on this website.
           </p>
         </li>
 
         <li>
           <h3>Indemnification</h3>
           <p>
-            You agree to indemnify and hold our store and its affiliates, officers, agents, employees, and partners harmless from any claim or demand, including reasonable   
- attorneys' fees, made by any third party due to or arising out of your use of the website,   
- your violation of these Terms and Conditions, or your violation of any rights of another.   
+            You agree to indemnify and hold our store and its affiliates, officers, agents, employees, and partners harmless from any claim or demand, including reasonable attorneys&apos;   
+ fees, made by any third party due to or arising out of your use of the website, your violation of these Terms and Conditions, or your violation of any rights of another.   
 
           </p>
         </li>
@@ -145,8 +144,8 @@ const TermsPolicy = () => {
           <h3>Governing Law</h3>
           <p>
             These Terms and Conditions shall be governed by and construed in accordance with the laws of   
- Australia, without giving effect to any principles of conflicts of   
- law.
+ Australia, without giving effect to any principles   
+ of conflicts of law.
           </p>
         </li>
 
