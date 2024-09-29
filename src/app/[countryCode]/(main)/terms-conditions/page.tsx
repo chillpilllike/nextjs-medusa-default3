@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 const TermsPolicy = () => {
    return (
- <div className="container mx-auto p-4">
+<div className="container mx-auto p-4">
   <h2 className="text-3xl font-bold mb-4">Terms and Conditions</h2>
 
   <ol className="space-y-6">
@@ -120,7 +120,7 @@ const TermsPolicy = () => {
       <li>
         <h3 className="text-2xl font-semibold mb-4">Disclaimer of Warranties</h3>
         <p className="text-gray-700">
-          This website and all products and services offered on this website are provided on an "as is" and "as available" basis. Our website makes no representations or warranties of any kind, express or implied, as to the operation of this website or the information, content, materials, or products included on this website.
+          This website and all products and services offered on this website are provided on an &quot;as is&quot; and &quot;as available&quot; basis. Our website makes no representations or warranties of any kind, express or implied, as to the operation of this website or the information, content, materials, or products included on this website.
         </p>
       </li>
     </div>
