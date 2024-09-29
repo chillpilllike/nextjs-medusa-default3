@@ -20,13 +20,17 @@ export default async function Nav() {
             </div>
           </div>
 
-          <div className="flex items-center h-full">
+         <div className="flex items-center h-full">
             <LocalizedClientLink
               href="/"
               className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
               data-testid="nav-store-link"
             >
-              Homepage Store Logo
+              <img 
+                src="/logo/logo.png" 
+                alt="Store Logo" 
+                className="h-8 max-w-full object-contain"
+              />
             </LocalizedClientLink>
           </div>
 
