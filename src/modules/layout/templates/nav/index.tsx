@@ -27,7 +27,7 @@ export default async function Nav() {
               data-testid="nav-store-link"
             >
               <img 
-                src="/logo/logo.png" 
+                src="https://github.com/chillpilllike/nextjs-medusa-default3/blob/c8cff458805be81e5bf42043ad1e0f0a89c25b1f/src/app/%5BcountryCode%5D/(main)/logo/logo.png" 
                 alt="Store Logo" 
                 className="h-8 max-w-full object-contain"
               />
