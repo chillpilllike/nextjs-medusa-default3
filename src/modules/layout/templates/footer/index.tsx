@@ -154,6 +154,16 @@ support@vitashop.co.nz            </p>
                     Shipping Policy
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="/customer-service"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-ui-fg-base"
+                  >
+                    Contact us
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
