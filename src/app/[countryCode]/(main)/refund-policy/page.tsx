@@ -18,14 +18,16 @@ const RefundPolicy = () => {
   <div className="max-w-4xl mx-auto p-6 bg-white">
   <h1 className="text-4xl font-bold mb-6 text-gray-900">Refund Policy</h1>
 
-  <section className="mb-8">
+  {/* Section 1: Overview */}
+  <section className="mb-8 bg-white p-6 rounded-lg shadow-md">
     <h2 className="text-2xl font-semibold mb-4 text-gray-800">Overview</h2>
     <p className="text-gray-700">
       Thank you for shopping at our store. If you are not entirely satisfied with your purchase, we&apos;re here to help. Our products can be returned within 30 days of the original purchase.
     </p>
   </section>
 
-  <section className="mb-8">
+  {/* Section 2: Eligibility for Returns */}
+  <section className="mb-8 bg-white p-6 rounded-lg shadow-md">
     <h2 className="text-2xl font-semibold mb-4 text-gray-800">Eligibility for Returns</h2>
     <p className="text-gray-700">
       To qualify for a return, please make sure that:
@@ -38,7 +40,8 @@ const RefundPolicy = () => {
     </ul>
   </section>
 
-  <section className="mb-8">
+  {/* Section 3: Products that Cannot be Returned */}
+  <section className="mb-8 bg-white p-6 rounded-lg shadow-md">
     <h2 className="text-2xl font-semibold mb-4 text-gray-800">Products that Cannot be Returned</h2>
     <p className="text-gray-700">
       Some items are not eligible for returns, including:
@@ -52,7 +55,8 @@ const RefundPolicy = () => {
     </ul>
   </section>
 
-  <section className="mb-8">
+  {/* Section 4: Initiating a Return */}
+  <section className="mb-8 bg-white p-6 rounded-lg shadow-md">
     <h2 className="text-2xl font-semibold mb-4 text-gray-800">Initiating a Return</h2>
     <ol className="list-decimal pl-6 text-gray-700">
       <li className="mb-4">
@@ -67,7 +71,8 @@ const RefundPolicy = () => {
     </ol>
   </section>
 
-  <section className="mb-8">
+  {/* Section 5: Processing Your Return */}
+  <section className="mb-8 bg-white p-6 rounded-lg shadow-md">
     <h2 className="text-2xl font-semibold mb-4 text-gray-800">Processing Your Return</h2>
     <p className="text-gray-700">
       Upon receiving the product, we will inspect it and notify you that we have received your returned item. We will immediately notify you of the status of your refund after inspecting the item.
@@ -77,14 +82,16 @@ const RefundPolicy = () => {
     </p>
   </section>
 
-  <section className="mb-8">
+  {/* Section 6: Exchanges (if applicable) */}
+  <section className="mb-8 bg-white p-6 rounded-lg shadow-md">
     <h2 className="text-2xl font-semibold mb-4 text-gray-800">Exchanges (if applicable)</h2>
     <p className="text-gray-700">
       If your product is defective or damaged and you need to exchange it for the same item, then contact us <a href="/customer-service" className="text-blue-500 underline">Contact us</a> and send your item to the address we provide.
     </p>
   </section>
 
-  <section>
+  {/* Section 7: Contact Us */}
+  <section className="bg-white p-6 rounded-lg shadow-md">
     <h2 className="text-2xl font-semibold mb-4 text-gray-800">Contact Us</h2>
     <p className="text-gray-700">
       If you have any questions about our Refund Policy, please contact us:
