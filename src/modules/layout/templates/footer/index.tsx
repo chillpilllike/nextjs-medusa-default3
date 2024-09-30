@@ -26,7 +26,7 @@ export default async function Footer() {
               Welcome to our store, your go-to destination for high-quality, unique products curated with care. We pride ourselves on delivering exceptional customer service, fast shipping, and a seamless shopping experience.
             </p>
             <p className="mt-2 text-ui-fg-subtle text-sm">
-support@vitashop.co.nz            </p>
+Email: support@vitashop.co.nz            </p>
 
           </div>
           <div className="text-small-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">
