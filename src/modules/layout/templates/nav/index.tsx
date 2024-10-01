@@ -20,17 +20,13 @@ export default async function Nav() {
             </div>
           </div>
 
-         <div className="flex items-center h-full">
+           <div className="flex items-center h-full">
             <LocalizedClientLink
               href="/"
               className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
               data-testid="nav-store-link"
             >
-              <img 
-                src="https://github.com/chillpilllike/nextjs-medusa-default3/blob/c8cff458805be81e5bf42043ad1e0f0a89c25b1f/src/app/%5BcountryCode%5D/(main)/logo/logo.png" 
-                alt="Store Logo" 
-                className="h-8 max-w-full object-contain"
-              />
+              VitaShop
             </LocalizedClientLink>
           </div>
 
