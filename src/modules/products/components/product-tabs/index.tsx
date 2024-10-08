@@ -75,12 +75,10 @@ const ProductInfoTab = ({ product }: ProductTabsProps) => {
           </div>
         </div>
       </div>
-      {product.tags?.length ? (
-  <div>
-    <span className="font-semibold">Tags</span>
-    <p>{product.tags.map(tag => tag.name).join(", ")}</p>
-  </div>
-) : "-"}
+       <div>
+  <span className="font-semibold">Tags</span>
+  <p>{product.tags?.length ? product.tags.map(tag => tag.value).join(", ") : "-"}</p>
+</div>
     </div>
   )
 }
