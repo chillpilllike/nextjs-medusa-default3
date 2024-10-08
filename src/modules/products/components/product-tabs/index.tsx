@@ -59,7 +59,7 @@ const ProductInfoTab = ({ product }: ProductTabsProps) => {
         </div>
         <div className="flex flex-col gap-y-4">
           <div>
-            <span className="font-semibold">Weight</span>
+            <span className="font-semibold">Weight (lb)</span>
             <p>{product.weight ? `${product.weight} lb` : "-"}</p>
           </div>
           <div>
