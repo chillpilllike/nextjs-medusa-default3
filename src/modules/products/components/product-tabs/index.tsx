@@ -48,21 +48,13 @@ const ProductInfoTab = ({ product }: ProductTabsProps) => {
       <div className="grid grid-cols-2 gap-x-8">
         <div className="flex flex-col gap-y-4">
           <div>
-            <span className="font-semibold">Material</span>
-            <p>{product.material ? product.material : "-"}</p>
-          </div>
-          <div>
             <span className="font-semibold">Country of origin</span>
             <p>{product.origin_country ? product.origin_country : "-"}</p>
-          </div>
-          <div>
-            <span className="font-semibold">Type</span>
-            <p>{product.type ? product.type.value : "-"}</p>
           </div>
           {/* Brand from metadata */}
           <div>
   <span className="font-semibold">Brand</span>
-  <p>{product.metadata?.brand ? product.metadata.brand : "-"}</p>
+  <p>{product.metadata?.Brand ? product.metadata.Brand : "-"}</p>
 </div>
         </div>
         <div className="flex flex-col gap-y-4">
