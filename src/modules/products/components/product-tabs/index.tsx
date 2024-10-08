@@ -54,7 +54,7 @@ const ProductInfoTab = ({ product }: ProductTabsProps) => {
           {/* Brand from metadata */}
           <div>
   <span className="font-semibold">Brand</span>
-  <p>{product.metadata?.Brand ? product.metadata.Brand : "-"}</p>
+  <p>{product.metadata?.Brand ? `${product.metadata.Brand}` : "-"}</p>
 </div>
         </div>
         <div className="flex flex-col gap-y-4">
