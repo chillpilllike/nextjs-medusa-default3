@@ -146,7 +146,7 @@ Email: support@vitashop.co.nz            </p>
                 </li>
                  <li>
                   <a
-                    href="/shipping-policy"
+                    href="/contact-us"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:text-ui-fg-base"
