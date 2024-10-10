@@ -18,7 +18,7 @@ export default async function Footer() {
               href="/"
               className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
             >
-              About VitaShop
+              About gofinch
             </LocalizedClientLink>
 
             {/* New text added just below the "Medusa Store" link with a max width to prevent overflow */}
@@ -26,7 +26,7 @@ export default async function Footer() {
               Welcome to our store, your go-to destination for high-quality, unique products curated with care. We pride ourselves on delivering exceptional customer service, fast shipping, and a seamless shopping experience.
             </p>
             <p className="mt-2 text-ui-fg-subtle text-sm">
-Email: support@vitashop.co.nz            </p>
+Email: support@gofinch.com.au            </p>
 
           </div>
           <div className="text-small-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">
@@ -170,7 +170,7 @@ Email: support@vitashop.co.nz            </p>
         </div>
         <div className="flex w-full mb-16 justify-between text-ui-fg-muted">
           <Text className="txt-compact-small">
-            © {new Date().getFullYear()} VitaShop.co.nz All rights reserved.
+            © {new Date().getFullYear()} gofinch.com.au All rights reserved.
           </Text>
           <MedusaCTA />
         </div>
