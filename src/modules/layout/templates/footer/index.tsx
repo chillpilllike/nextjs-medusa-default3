@@ -155,9 +155,14 @@ Email: support@vitashop.co.nz            </p>
                   </a>
                 </li>
                 <li>
-                  <UnderlineLink href="/customer-service">
-              Customer Service
-            </UnderlineLink>
+                  <a
+                    href="/contact-us"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-ui-fg-base"
+                  >
+                    Contact us
+                  </a>
                 </li>
               </ul>
             </div>
