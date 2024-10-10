@@ -62,7 +62,7 @@ const RefundPolicy = () => {
       <li className="mb-4">
         <strong>Contact Us:</strong> Before sending the product back to us, please contact us:
         <ul className="list-disc pl-6 text-gray-700">
-          <li>By visiting this page on our website: <a href="/customer-service" className="text-blue-500 underline">Contact Us</a></li>
+          <li>By visiting this page on our website: <a href="/contact-us" className="text-blue-500 underline">Contact Us</a></li>
         </ul>
       </li>
       <li>
@@ -86,7 +86,7 @@ const RefundPolicy = () => {
   <section className="mb-8 bg-white p-6 rounded-lg shadow-md">
     <h2 className="text-2xl font-semibold mb-4 text-gray-800">Exchanges (if applicable)</h2>
     <p className="text-gray-700">
-      If your product is defective or damaged and you need to exchange it for the same item, then contact us <a href="/customer-service" className="text-blue-500 underline">Contact us</a> and send your item to the address we provide.
+      If your product is defective or damaged and you need to exchange it for the same item, then contact us <a href="/contact-us" className="text-blue-500 underline">Contact us</a> and send your item to the address we provide.
     </p>
   </section>
 
@@ -97,7 +97,7 @@ const RefundPolicy = () => {
       If you have any questions about our Refund Policy, please contact us:
     </p>
     <ul className="list-disc pl-6 text-gray-700">
-      <li>By visiting this page on our website: <a href="/customer-service" className="text-blue-500 underline">Contact us</a></li>
+      <li>By visiting this page on our website: <a href="/contact-us" className="text-blue-500 underline">Contact us</a></li>
       <li>By online chat support. Click the chat button at the bottom left of every page.</li>
     </ul>
   </section>
