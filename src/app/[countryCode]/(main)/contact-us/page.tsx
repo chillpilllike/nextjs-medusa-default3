@@ -30,7 +30,7 @@ const ContactUs = () => {
   <div className="mb-4 bg-white p-6 rounded-lg shadow-md">
     <h2 className="text-2xl font-semibold mb-2 text-gray-800">Email</h2>
     <p className="text-gray-700">
-      You can email us at <a href="mailto:support@vitashop.co.nz" className="text-blue-500 underline">support@vitashop.co.nz</a>
+      You can email us at <a href="mailto:support@gofinch.com.au" className="text-blue-500 underline">support@gofinch.com.au</a>
     </p>
   </div>
 
