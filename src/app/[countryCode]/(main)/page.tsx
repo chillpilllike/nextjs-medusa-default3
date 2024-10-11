@@ -8,9 +8,9 @@ import { ProductCollectionWithPreviews } from "types/global"
 import { cache } from "react"
 
 export const metadata: Metadata = {
-  title: "Medusa Next.js Starter Template",
+  title: "Premium Supplements for Health & Wellness | Peak Performance Nutrition - gofinch",
   description:
-    "A performant frontend ecommerce starter template with Next.js 14 and Medusa.",
+    "Discover high-quality supplements for fitness, health, and wellness. Shop our range of vitamins, protein powders, and more to boost your daily performance.",
 }
 
 const getCollectionsWithProducts = cache(
